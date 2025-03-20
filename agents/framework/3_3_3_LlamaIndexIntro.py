@@ -1,10 +1,17 @@
 # 读取系统变量
 from dotenv import load_dotenv
-load_dotenv()  
+load_dotenv()
+import os
 
 # 从指定目录读取文档数据
-from llama_index.core import SimpleDirectoryReader  
-documents = SimpleDirectoryReader(r"data").load_data()
+from llama_index.core import SimpleDirectoryReader
+# 获取当前项目的根目录
+project_root = os.getcwd()
+print("projectroot:",project_root)
+
+# 拼接 data 目录的路径
+data_path = os.path.join(project_root, "framework/data")
+documents = SimpleDirectoryReader(data_path).load_data()
 
 # # 使用读取到的文档数据创建向量存储索引
 # from llama_index.core import VectorStoreIndex
