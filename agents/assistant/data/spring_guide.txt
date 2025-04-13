@@ -1,0 +1,66 @@
+# Spring Framework 简介
+
+Spring 是一个开源的 Java 企业级开发框架，旨在简化 Java 开发，促进良好的编程习惯，比如面向接口编程、依赖注入（DI）和控制反转（IoC）。
+
+## 核心概念
+
+### 1. IoC 容器（控制反转）
+Spring IoC 容器负责管理对象的生命周期，通过配置文件或注解方式将依赖关系注入到 Bean 中。
+
+常用注解：
+- @Component：标识为组件
+- @Service：标识为服务层组件
+- @Repository：标识为持久层组件
+- @Autowired：自动注入依赖
+
+### 2. AOP（面向切面编程）
+AOP 允许将横切关注点（如日志、事务、权限）与业务逻辑分离。
+
+关键概念包括：
+- 切面（Aspect）
+- 通知（Advice）
+- 切点（Pointcut）
+
+### 3. Spring MVC
+Spring MVC 是基于 DispatcherServlet 的 Web 框架，采用前后端分离的架构。
+
+核心组件：
+- Controller 控制器
+- Service 业务逻辑
+- Repository 数据访问
+- View 页面层（如 Thymeleaf）
+
+### 4. Spring Boot
+Spring Boot 是对 Spring 框架的快速封装，用于简化配置和部署。
+
+特点：
+- 内嵌 Tomcat
+- 自动配置
+- 配置文件 application.yml
+- 启动类 @SpringBootApplication
+
+### 5. 常见注解说明
+- @SpringBootApplication：组合注解，包括 @Configuration, @EnableAutoConfiguration, @ComponentScan
+- @RestController：返回 JSON 数据
+- @RequestMapping：URL 路由映射
+- @Value：注入配置文件中的值
+- @Transactional：声明式事务管理
+
+## 实践建议
+
+- 将配置和逻辑解耦，采用配置类 + 注解方式
+- 使用日志打印关键行为（如启动流程、异常等）
+- 优先使用构造器注入
+- 控制 Bean 的作用域（如 prototype / singleton）
+
+## 示例问题
+
+Q: 什么是 IoC？Spring 如何实现依赖注入？
+A: 控制反转（IoC）是指由容器负责创建和注入对象，Spring 通过注解或 XML 方式进行依赖注入。
+
+Q: @Component 和 @Service 有什么区别？
+A: 本质上没有区别，只是语义不同，用于标识组件在不同层（如 Service 层、DAO 层）。
+
+Q: Spring Boot 和 Spring 的区别？
+A: Spring Boot 是 Spring 的进一步封装，简化了配置过程，适合快速开发微服务。
+
