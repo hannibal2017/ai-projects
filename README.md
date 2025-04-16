@@ -14,7 +14,7 @@ Python版本：3.9
 
 ## 基于deepseek的聊天工具，支持流式输出
 1、启动deepseek/chat_app.py；  
-2、访问：http://127.0.0.1:7860/
+2、访问：http://127.0.0.1:7860/  
 3、交互图
 ![img.png](picture/img_2.png)
 ![img.png](picture/img_3.png)
